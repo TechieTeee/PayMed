@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation Bar */}
-      <nav className="bg-blue-700 p-4 text-white">
+      <nav style={{ backgroundColor: '#00C6F9' }}>
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <Image src="/PayMed/paymed-frontend/public/PayMed Logo.png" alt="PayMed Logo" width={120} height={30} />
+            <Image src="/PayMed Logo.png" alt="PayMed Logo" width={120} height={30} />
           </div>
           <div className="flex space-x-4">
             <Link href="#paymed-info">
@@ -62,7 +62,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-500 p-4 text-white text-center">
+      <footer style={{ backgroundColor: '#00C6F9' }}>
         <p>&copy; 2023 PayMed. All rights reserved.</p>
       </footer>
     </div>
