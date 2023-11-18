@@ -8,17 +8,17 @@ export default function Home() {
       <nav className="bg-blue-700 p-4 text-white">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <Image src="/paymed-logo.png" alt="PayMed Logo" width={120} height={30} />
+            <Image src="/PayMed/paymed-frontend/public/PayMed Logo.png" alt="PayMed Logo" width={120} height={30} />
           </div>
           <div className="flex space-x-4">
             <Link href="#paymed-info">
-              <a className="hover:text-gray-300">PayMed</a>
+              <span className="hover:text-gray-300">PayMed</span>
             </Link>
             <Link href="#problem-solution">
-              <a className="hover:text-gray-300">Problem & Solution</a>
+              <span className="hover:text-gray-300">Problem & Solution</span>
             </Link>
             <Link href="#blockchain-advantages">
-              <a className="hover:text-gray-300">Blockchain Advantages</a>
+              <span className="hover:text-gray-300">Blockchain Advantages</span>
             </Link>
           </div>
         </div>
