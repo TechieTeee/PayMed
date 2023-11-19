@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@aleohq/sdk": "^0.6.7",
+    "@gnosis.pm/safe-apps-sdk": "^7.8.0",
     "@walletconnect/web3-provider": "^1.8.0",
     "@walletconnect/web3wallet": "^1.9.4",
     "@web3inbox/core": "^0.0.22",
@@ -12,6 +13,7 @@
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.3.5",
     "wagmi": "^1.4.7",
-    "web3modal": "^1.9.12"
+    "web3modal": "^1.9.12",
+    "zksync-web3": "^0.16.0"
   }
 }
