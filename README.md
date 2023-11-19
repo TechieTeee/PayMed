@@ -1,4 +1,5 @@
 # PayMed
+![PayMed Logo](https://github.com/TechieTeee/PayMed/assets/100870737/5af66eb1-dc59-49ea-a909-58891864465f)
 
 ## Background
 PayMed is a decentralized application (DApp) that aims to revolutionize healthcare payments by leveraging blockchain technology. The project addresses the challenges in the current healthcare payment landscape, such as high medical debt, complex payment processes, and lack of transparency.
