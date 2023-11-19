@@ -4,15 +4,6 @@ pragma solidity ^0.8.20;
 // Import OpenZeppelin's Ownable contract for access control
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-// Import the required interface for the USDC subgraph
-import "./USDCSubgraphInterface.sol"; // Update with the actual path to your interface
-
-// Import zkSync's contracts
-import "./zksync/ZkSync.sol"; // Update with the actual path to zkSync
-
-// Import Arx oracle interface
-import "./ArxOracleInterface.sol"; // Update with the actual path to Arx oracle interface
-
 contract PayMedMainContract is Ownable {
     // Mapping to store the IPFS hash of files associated with a payment
     mapping(uint256 => string) private paymentToFile;
@@ -38,9 +29,6 @@ contract PayMedMainContract is Ownable {
     // Event emitted when the exchange rate is updated by the Arx oracle
     event ExchangeRateUpdated(string currency, uint256 rate);
 
-    // Address of the USDC subgraph contract
-    address private usdcSubgraph;
-
     // Address of the community wallet
     address private communityWallet;
 
@@ -49,11 +37,6 @@ contract PayMedMainContract is Ownable {
 
     // Address of the Arx oracle contract
     address private arxOracle;
-
-    // Function to set the address of the USDC subgraph (onlyOwner)
-    function setUSDCSubgraph(address _usdcSubgraph) external onlyOwner {
-        usdcSubgraph = _usdcSubgraph;
-    }
 
     // Function to set the address of the community wallet (onlyOwner)
     function setCommunityWallet(address _communityWallet) external onlyOwner {
@@ -78,8 +61,6 @@ contract PayMedMainContract is Ownable {
         // You need to implement this function in your zkSync interface
         // For example: ZkSync(zkSyncContract).deposit{value: amount}();
         // Update the function based on the actual zkSync interface
-        ZkSync(zkSyncContract).deposit{value: amount}();
-
         emit FundsDepositedToZkSync(msg.sender, amount);
     }
 
@@ -91,8 +72,6 @@ contract PayMedMainContract is Ownable {
         // You need to implement this function in your zkSync interface
         // For example: ZkSync(zkSyncContract).withdraw(amount);
         // Update the function based on the actual zkSync interface
-        ZkSync(zkSyncContract).withdraw(amount);
-
         emit FundsWithdrawnFromZkSync(msg.sender, amount);
     }
 
