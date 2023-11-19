@@ -1,0 +1,55 @@
+type PaymentStatus = Map(UInt256, Bool)
+
+type PayMedMainContract = {
+  paymentToFile : Map(UInt256, String),
+  paymentStatus : PaymentStatus,
+  zkSyncContract : Address,
+}
+
+stateful contract PayMedMainContract
+
+  // Event emitted when a payment is made and a file is shared
+  event PaymentMade(paymentId : UInt256, payer : Address, amount : Wei, ipfsHash : String)
+
+  // Event emitted when funds are deposited into zkSync
+  event FundsDepositedToZkSync(depositor : Address, amount : Wei)
+
+  // Event emitted when funds are withdrawn from zkSync
+  event FundsWithdrawnFromZkSync(recipient : Address, amount : Wei)
+
+  // Function to set the address of the zkSync contract
+  public stateful function setZkSyncContract(zkSyncContract : Address) =
+    PayMedMainContract { zkSyncContract = zkSyncContract, ..state }
+
+  // Function to deposit funds into zkSync
+  public stateful function depositFundsToZkSync(amount : Wei) =
+    require(state.zkSyncContract != Address.zero, "zkSync contract not set")
+    // Call the deposit function in zkSync contract
+    Chain.spend(state.zkSyncContract, amount)
+    FundsDepositedToZkSync(Call.caller, amount)
+
+  // Function to withdraw funds from zkSync
+  public stateful function withdrawFundsFromZkSync(amount : Wei) =
+    require(state.zkSyncContract != Address.zero, "zkSync contract not set")
+    // Call the withdraw function in zkSync contract
+    Chain.spend(Call.caller, amount)
+    FundsWithdrawnFromZkSync(Call.caller, amount)
+
+  // Function to make a payment and share a file
+  public stateful function makePaymentAndShareFile(paymentId : UInt256, ipfsHash : String) =
+    // Ensure payment has not been made before
+    require(!state.paymentStatus[paymentId], "Payment already made")
+    // Accept payment
+    require(Call.value > 0, "Payment amount must be greater than 0")
+    // Update payment status to true
+    PayMedMainContract { paymentStatus[paymentId] = true, paymentToFile[paymentId] = ipfsHash, ..state }
+    // Emit event
+    PaymentMade(paymentId, Call.caller, Call.value, ipfsHash)
+
+  // Function to retrieve the IPFS hash associated with a payment
+  public function getFileForPayment(paymentId : UInt256) : String =
+    state.paymentToFile[paymentId]
+
+  // Function to check if a payment has been made
+  public function isPaymentMade(paymentId : UInt256) : Bool =
+    state.paymentStatus[paymentId]
