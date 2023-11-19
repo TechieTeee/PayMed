@@ -1,0 +1,39 @@
+# Ignore env files
+.env
+*.env
+.env*.local
+
+# Ignore dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Ignore testing artifacts
+/coverage
+
+# Ignore Next.js build artifacts
+/.next/
+/out/
+
+# Ignore production build artifacts
+/build
+
+# Ignore miscellaneous files
+.DS_Store
+*.pem
+
+# Ignore debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Vercel build artifacts
+.vercel
+
+# Ignore TypeScript artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# Ignore files or directories with "linux" in the name
+*linux*
