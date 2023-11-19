@@ -20,7 +20,7 @@ export default function Home() {
             <Link href="#blockchain-advantages">
               <span className="hover:text-gray-300">PayMed Advantages</span>
             </Link>
-            <Link href="/portal">
+            <Link href="/PayMedPortal">
               <span className="hover:text-gray-300">PayMed Portal</span>
             </Link>
           </div>
