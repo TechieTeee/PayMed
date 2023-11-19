@@ -24,6 +24,8 @@ PayMed introduces a solution by utilizing blockchain technology, smart contracts
 
 - **Subgraph (USDC Subgraph):** Uses a subgraph to index and query data related to USDC transactions, enhancing the efficiency of retrieving information from the blockchain.
 
+- **Lens:** Shareable and discoverable profiles
+
 - **Events:** Emits events throughout the contract to provide a transparent and verifiable record of important actions, such as payments made, funds deposited, and funds withdrawn.
 
 - **Community Wallet:** Introduces the concept of a community wallet to facilitate collective funding and withdrawals for cash assistance.
