@@ -1,7 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from
+ 
+'next/image';
+import Link from
+ 
+'next/link';
 
-export default function Home() {
+export
+ 
+default
+ 
+function
+ 
+Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation Bar */}
@@ -20,9 +30,16 @@ export default function Home() {
             <Link href="#blockchain-advantages">
               <span className="hover:text-gray-300">PayMed Advantages</span>
             </Link>
-            <Link href="/PayMedPortal">
+            <Link href="/portal">
               <span className="hover:text-gray-300">PayMed Portal</span>
             </Link>
+            <Link href="/login">
+  <button style={{ backgroundColor: '#0056b3', color: '#fff', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+    Sign In
+  </button>
+</Link>
+
+
           </div>
         </div>
       </nav>
