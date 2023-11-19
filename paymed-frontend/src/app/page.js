@@ -108,6 +108,24 @@ export default function Home() {
             <li><strong>Reduce Fraud:</strong> Blockchain's transparency curbs counterfeit drugs and abuse.</li>
           </ul>
         </section>
+
+{/* PayMed Portal Section */}
+<section id="paymed-portal" className="mb-8 text-center">
+  <h2 className="text-2xl font-semibold">PayMed Portal</h2>
+  <p className="mt-4 text-gray-600">
+    Explore our PayMed Portal to access additional features and services.
+  </p>
+  {/* Add a button to go to the portal page */}
+  <Link href="/portal">
+    <span className="mt-4 bg-blue-500 text-white px-4 py-2 rounded inline-block cursor-pointer">
+      Go to PayMed Portal
+    </span>
+  </Link>
+</section>
+
+
+
+
       </main>
 
       {/* Footer */}
