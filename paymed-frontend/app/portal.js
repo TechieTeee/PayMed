@@ -11,11 +11,17 @@ export default function ProfilesPage() {
             <Image src="/PayMed Logo.png" alt="PayMed Logo" width={120} height={30} />
           </div>
           <div className="flex space-x-4">
-            <Link href="#patient-profile">
-              <span className="hover:text-gray-300">Patient Profile</span>
+            <Link href="#paymed-info">
+              <span className="hover:text-gray-300">PayMed</span>
             </Link>
-            <Link href="#clinician-profile">
-              <span className="hover:text-gray-300">Clinician Profile</span>
+            <Link href="#problem-solution">
+              <span className="hover:text-gray-300">Problem & Solution</span>
+            </Link>
+            <Link href="#blockchain-advantages">
+              <span className="hover:text-gray-300">PayMed Advantages</span>
+            </Link>
+            <Link href="/PayMedPortal">
+              <span className="hover:text-gray-300">PayMed Portal</span>
             </Link>
           </div>
         </div>
@@ -29,28 +35,27 @@ export default function ProfilesPage() {
       {/* Main Content */}
       <main className="relative flex-1 flex items-center justify-center p-8">
         <div className="text-center">
-          {/* Patient Profile */}
-          <section id="patient-profile" className="mb-8">
-            <h2 className="text-2xl font-semibold">Patient Profile</h2>
-            <div className="flex justify-center items-center mt-4">
-              <div className="mr-4">
+          {/* Profiles Section */}
+          <section className="flex justify-center space-x-8">
+            {/* Patient Profile */}
+            <div id="patient-profile" className="flex flex-col items-center">
+              <h2 className="text-2xl font-semibold">Patient Profile</h2>
+              <div className="mt-4">
                 <Image src="/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg" alt="Patient Image" width={200} height={200} />
               </div>
-              <div>
+              <div className="mt-2">
                 <p className="text-gray-600">Enter here for patient profile.</p>
                 <button className="bg-blue-500 text-white px-4 py-2 mt-2">View Profile</button>
               </div>
             </div>
-          </section>
 
-          {/* Clinician Profile */}
-          <section id="clinician-profile" className="mb-8">
-            <h2 className="text-2xl font-semibold">Clinician Profile</h2>
-            <div className="flex justify-center items-center mt-4">
-              <div className="mr-4">
+            {/* Clinician Profile */}
+            <div id="clinician-profile" className="flex flex-col items-center">
+              <h2 className="text-2xl font-semibold">Clinician Profile</h2>
+              <div className="mt-4">
                 <Image src="/bruno-rodrigues-279xIHymPYY-unsplash.jpg" alt="Clinician Image" width={200} height={200} />
               </div>
-              <div>
+              <div className="mt-2">
                 <p className="text-gray-600">Enter here for clinician profile.</p>
                 <button className="bg-blue-500 text-white px-4 py-2 mt-2">View Profile</button>
               </div>
@@ -60,9 +65,10 @@ export default function ProfilesPage() {
       </main>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#00C6F9' }}>
+      <footer style={{ backgroundColor: '#00C6F9' }} className="p-4 text-white text-center">
         <p>&copy; 2023 PayMed. All rights reserved.</p>
       </footer>
     </div>
   );
 }
+
