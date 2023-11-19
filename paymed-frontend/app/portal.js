@@ -23,7 +23,7 @@ export default function ProfilesPage() {
 
       {/* Header */}
       <header className="bg-blue-500 p-4 text-white text-center">
-        <h1 className="text-4xl font-bold">Profiles Page</h1>
+        <h1 className="text-4xl font-bold">PayMed Portal</h1>
       </header>
 
       {/* Main Content */}
@@ -34,10 +34,10 @@ export default function ProfilesPage() {
             <h2 className="text-2xl font-semibold">Patient Profile</h2>
             <div className="flex justify-center items-center mt-4">
               <div className="mr-4">
-                <Image src="/patient-image.jpg" alt="Patient Image" width={200} height={200} />
+                <Image src="/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg" alt="Patient Image" width={200} height={200} />
               </div>
               <div>
-                <p className="text-gray-600">Description of the patient profile goes here.</p>
+                <p className="text-gray-600">Enter here for patient profile.</p>
                 <button className="bg-blue-500 text-white px-4 py-2 mt-2">View Profile</button>
               </div>
             </div>
@@ -48,10 +48,10 @@ export default function ProfilesPage() {
             <h2 className="text-2xl font-semibold">Clinician Profile</h2>
             <div className="flex justify-center items-center mt-4">
               <div className="mr-4">
-                <Image src="/clinician-image.jpg" alt="Clinician Image" width={200} height={200} />
+                <Image src="/bruno-rodrigues-279xIHymPYY-unsplash.jpg" alt="Clinician Image" width={200} height={200} />
               </div>
               <div>
-                <p className="text-gray-600">Description of the clinician profile goes here.</p>
+                <p className="text-gray-600">Enter here for clinician profile.</p>
                 <button className="bg-blue-500 text-white px-4 py-2 mt-2">View Profile</button>
               </div>
             </div>
