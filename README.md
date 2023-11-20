@@ -30,7 +30,7 @@ PayMed introduces a solution by utilizing blockchain technology, smart contracts
 
 - **Community Wallet:** Introduces the concept of a community wallet to facilitate collective funding and withdrawals for cash assistance.
 
-- **Rust Smart Contract:** Implements a separate smart contract written in Rust, possibly for another blockchain, providing additional privacy for credentials and an alternative option for users.
+- **Fe Smart Contract:** Implements a separate smart contract written in Fe with Rust, providing additional privacy for credentials and an alternative option for users.
 
 - **NextJS and Tailwind:** Utilizes NextJS for the frontend framework and Tailwind CSS for styling to create an engaging and responsive user interface.
 
