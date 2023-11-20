@@ -5,7 +5,7 @@
 PayMed is a decentralized application (DApp) that aims to revolutionize healthcare payments by leveraging blockchain technology. The project addresses the challenges in the current healthcare payment landscape, such as high medical debt, complex payment processes, and lack of transparency.
 
 ## Problem
-The healthcare industry faces significant issues, including staggering medical debt, in-network requirements, variable copays, and deductibles. These challenges make it difficult for patients to access preferred healthcare professionals at reasonable prices. Additionally, issues like fraud and lack of transparency contribute to the financial strain associated with medical expenses.
+With more than $923 billion dollars of medical debt in the U.S. and similar challenges to affordable healthcare globally, the healthcare industry faces significant issues, including staggering medical debt, in-network requirements, variable copays, and deductibles. These challenges make it difficult for patients to access preferred healthcare professionals at reasonable prices. Additionally, issues like fraud and lack of transparency contribute to the financial strain associated with medical expenses.
 
 ## Solution
 PayMed introduces a solution by utilizing blockchain technology, smart contracts, and decentralized finance (DeFi) principles. The core features of the PayMed DApp include:
@@ -40,7 +40,7 @@ PayMed introduces a solution by utilizing blockchain technology, smart contracts
 
 - **Gnosis for Community Wallet:** Integrates Gnosis for the community wallet, enhancing security and governance features for collective fund management.
 
-- **Global Poverty Relief:** Aligns with UNICEF and UN goals for global poverty relief, contributing to a more inclusive and equitable healthcare system.
+- **Global Poverty Relief:** Aligns with UNICEF goals for global poverty relief, contributing to a more inclusive and equitable healthcare system.
 
 ## Deployments
 
