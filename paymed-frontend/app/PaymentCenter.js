@@ -1,7 +1,29 @@
+import React from 'react';
+import MiniPay from '@celo/react-celo/MiniPay';
+import { CeloProvider, Account, Signer } from '@celo/react-celo';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PaymentCenter() {
+  const { account, signer } = useAccount();
+
+  const handlePayment = async () => {
+    const miniPay = new MiniPay({
+      network: 'alfajores',
+      provider: account.provider,
+      signer,
+    });
+
+    const { paymentRequest } = await miniPay.createPaymentRequest({
+      amount: 1.00,
+      currency: 'CGLD',
+      description: 'Payment for healthcare services',
+    });
+
+    const payment = await miniPay.pay(paymentRequest);
+    console.log('Payment successful:', payment);
+  };
+
   // Dummy data for patient information
   const patient = {
     name: 'Joshua Evans',
@@ -54,6 +76,7 @@ export default function PaymentCenter() {
           </div>
         </div>
       </nav>
+
 
       {/* Header */}
       <header className="bg-blue-500 p-4 text-white text-center">

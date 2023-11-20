@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@aleohq/sdk": "^0.6.7",
+    "@celo/react-celo": "^5.0.4",
     "@gnosis.pm/safe-apps-sdk": "^7.8.0",
     "@walletconnect/web3-provider": "^1.8.0",
     "@walletconnect/web3wallet": "^1.9.4",
